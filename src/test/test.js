@@ -2,16 +2,25 @@ function draw() {
     var canvas = document.getElementById('top-chart');
     if (canvas.getContext) {
         var ctx = canvas.getContext('2d');
+        ctx.strokeStyle = '#D40000';
+        ctx.lineWidth = 6;
 
         useCartesianCoordinateSystem(canvas);
         ctx.beginPath();
         ctx.moveTo(75, 50);
         ctx.lineTo(100, 75);
-        ctx.lineTo(200, 75);
-        ctx.lineTo(400, 55);
-        ctx.lineTo(800, 75);
-        ctx.lineTo(1800, 55);
+        ctx.lineTo(125, 25);
+        ctx.lineTo(150, 100);
+        ctx.lineTo(175, 50);
+        ctx.lineTo(200, 125);
+        ctx.lineTo(225, 25);
+        ctx.lineTo(250, 125);
+        ctx.lineTo(300, 25);
+        ctx.lineTo(325, 125);
         ctx.stroke();
+
+        setTimeout(function() {var ctx = canvas.getContext('2d');ctx.clearRect(0, 0, 300, 300);}, 1000);
+        setTimeout(function() {draw()}, 2000);
     }
 }
 
