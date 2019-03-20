@@ -1,7 +1,7 @@
 var arr = [{x:25,y:100},{x:50,y:25}];
 
 function animation(canvas) {
-    if (arr.length > 8) return;
+    if (arr.length > 16) return;
     var minY = 25;
     var maxY = 100;
     var step = 25;
